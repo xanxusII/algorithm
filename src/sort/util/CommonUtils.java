@@ -85,7 +85,7 @@ public class CommonUtils {
 	/** 
 	 * @功能描述:	验证排序结果是否正确
 	 *
-	 * @参数说明:	@param 待验证数组
+	 * @参数说明:	a: 待验证数组
 	 *          
 	 * @返回值:	boolean类型: true 数组排序正确; false 排序错误 
 	 *
@@ -104,9 +104,9 @@ public class CommonUtils {
 	/** 
 	 * @功能描述:	创建随机数组(元素在[0, max)之间)
 	 *
-	 * @参数说明:	@param length:	需要创建的数组长度
+	 * @参数说明:	length:	需要创建的数组长度
 	 * 
-	 * @参数说明:	@param max:		数组元素的最大值(不包括该值)
+	 * @参数说明:	max:	数组元素的最大值(不包括该值)
 	 * 
 	 * @返回值:	int[]
 	 *
@@ -127,9 +127,9 @@ public class CommonUtils {
 	/** 
 	 * @功能描述:	交换数组中任意两个元素的值
 	 *
-	 * @参数说明:	@param a
-	 * @参数说明:	@param i
-	 * @参数说明:	@param j
+	 * @参数说明:	a
+	 * @参数说明:	i
+	 * @参数说明:	j
 	 *          
 	 * @作者:		xanxus
 	 *
