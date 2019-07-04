@@ -67,7 +67,10 @@
  */
 package sort.util;
 
+import java.util.Arrays;
 import java.util.Random;
+
+import sort.base.SortTestable;
 
 /**
  *
@@ -89,7 +92,7 @@ public class CommonUtils {
 	 *          
 	 * @返回值:	boolean类型: true 数组排序正确; false 排序错误 
 	 *
-	 * @作者:		xanxus
+	 * @作者:	 xanxus
 	 *
 	 * @创建时间:	2019年7月3日 
 	 */  
@@ -110,7 +113,7 @@ public class CommonUtils {
 	 * 
 	 * @返回值:	int[]
 	 *
-	 * @作者:		xanxus
+	 * @作者:	 xanxus
 	 *
 	 * @创建时间:	2019年7月3日 
 	 */  
@@ -131,7 +134,7 @@ public class CommonUtils {
 	 * @参数说明:	i
 	 * @参数说明:	j
 	 *          
-	 * @作者:		xanxus
+	 * @作者:	 xanxus
 	 *
 	 * @创建时间:	2019年7月3日 
 	 */  
@@ -141,9 +144,65 @@ public class CommonUtils {
 		a[j] = temp;
 	}
 	
+	/** 
+	 * @功能描述:	复制数组
+	 *
+	 * @参数说明:	src
+	 * @参数说明:	@return
+	 *          
+	 * @返回值:	int[]
+	 *
+	 * @作者:	xanxus
+	 *
+	 * @创建时间:	2019年7月4日 
+	 */  
 	public static int[] copyArrays(int[] src){
 		int[] dest = new int[src.length];
 		System.arraycopy(src, 0, dest, 0, src.length);
 		return dest;
+	}
+	
+	
+	/** 
+	 * @功能描述:	测试排序
+	 *
+	 * @参数说明:	name
+	 * @参数说明:	a
+	 * @参数说明:	testSort
+	 *          
+	 * @返回值:	void
+	 *
+	 * @作者:	xanxus
+	 *
+	 * @创建时间:	2019年7月4日 
+	 */  
+	public static void doTestSort(String name , int[] a,SortTestable testSort){
+		doTestSort(name, a, testSort, false);
+	}
+	
+	/** 
+	 * @功能描述:	测试排序结果
+	 *
+	 * @参数说明: name: 排序算法名字
+	 * @参数说明: a: 待排序数组
+	 * @参数说明:	testSort: 排序算法
+	 * @参数说明:	isShowResults: 是否显示排序结果
+	 *          
+	 * @返回值:	void
+	 *
+	 * @作者:	xanxus
+	 *
+	 * @创建时间:	2019年7月4日 
+	 */  
+	public static void doTestSort(String name , int[] a,SortTestable testSort, boolean isShowResults){
+		System.out.println(name + "排序算法开始排序:......");
+		long startTime1 = System.currentTimeMillis();
+		testSort.test(a);
+		long endTime1 = System.currentTimeMillis();
+		int isSorted1 = CommonUtils.validateResults(a);
+		System.out.println(name + "算法排序是否正确: " + (isSorted1 > -1 ? "排序错误." + isSorted1 : "排序正确." ));
+		if(isShowResults)System.out.println(name + "算法排序结果: " + Arrays.toString(a));
+		System.out.println(name + "算法排序用时："  + (endTime1 - startTime1));
+		System.out.println("=================================================================");
 	}
 }

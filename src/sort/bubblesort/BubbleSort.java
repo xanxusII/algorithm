@@ -233,10 +233,10 @@ public class BubbleSort {
 		SortTestable testSort2 = (int[] a) -> sort2(a);
 		SortTestable testSort3 = (int[] a) -> sort3(a);
 		//处理排序
-		doTestSort("sort", sort_data_0_100, testSort);
-		doTestSort("sort1", sort_data_0_100_1, testSort1);
-		doTestSort("sort2", sort_data_0_100_2, testSort2);
-		doTestSort("sort3", sort_data_0_100_3, testSort3);
+		CommonUtils.doTestSort("sort", sort_data_0_100, testSort);
+		CommonUtils.doTestSort("sort1", sort_data_0_100_1, testSort1);
+		CommonUtils.doTestSort("sort2", sort_data_0_100_2, testSort2);
+		CommonUtils.doTestSort("sort3", sort_data_0_100_3, testSort3);
 		
 		
 //		运行结果如下：
@@ -268,20 +268,7 @@ public class BubbleSort {
 	
 
 	
-	public static void doTestSort(String name , int[] a,SortTestable testSort){
-		System.out.println(name + "排序算法开始排序:");
-		long startTime1 = System.currentTimeMillis();
-		testSort.test(a);
-		long endTime1 = System.currentTimeMillis();
-		int isSorted1 = CommonUtils.validateResults(a);
-	
-		System.out.println(name + "算法排序是否正确: " + (isSorted1 > -1 ? "排序错误." + isSorted1 : "排序正确." ));
-//		System.out.println(name + "算法排序结果: " + Arrays.toString(sort_data_0_100_1));
-		System.out.println(name + "算法排序用时："  + (endTime1 - startTime1));
-		
-		System.out.println("=================================================================");
-		
-	}
+
 }
 
 
