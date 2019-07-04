@@ -89,7 +89,7 @@ public class BubbleSort {
 	 *
 	 * @参数说明:	a:待排序数组;
 	 *          
-	 * @作者:		xanxus
+	 * @作者:	xanxus
 	 *
 	 * @创建时间:	2019年7月3日 
 	 */  
@@ -114,7 +114,7 @@ public class BubbleSort {
 	 *
 	 * @参数说明:	a
 	 *          
-	 * @作者:		xanxus
+	 * @作者:	xanxus
 	 *
 	 * @创建时间:	2019年7月3日 
 	 */  
@@ -152,7 +152,7 @@ public class BubbleSort {
 	 *          
 	 * @返回值:	void
 	 *
-	 * @作者:		xanxus
+	 * @作者:	xanxus
 	 *
 	 * @创建时间:	2019年7月3日 
 	 */  
@@ -188,7 +188,7 @@ public class BubbleSort {
 	 *          
 	 * @返回值:	void
 	 *
-	 * @作者:		xanxus
+	 * @作者:	xanxus
 	 *
 	 * @创建时间:	2019年7月3日 
 	 */  

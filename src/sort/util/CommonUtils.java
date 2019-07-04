@@ -92,7 +92,7 @@ public class CommonUtils {
 	 *          
 	 * @返回值:	boolean类型: true 数组排序正确; false 排序错误 
 	 *
-	 * @作者:	 xanxus
+	 * @作者:	xanxus
 	 *
 	 * @创建时间:	2019年7月3日 
 	 */  
@@ -113,7 +113,7 @@ public class CommonUtils {
 	 * 
 	 * @返回值:	int[]
 	 *
-	 * @作者:	 xanxus
+	 * @作者:	xanxus
 	 *
 	 * @创建时间:	2019年7月3日 
 	 */  
